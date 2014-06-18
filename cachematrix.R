@@ -1,7 +1,10 @@
-##
-## functions do
+## Caching the Inverse of a Matrix
 
-## Write a short comment describing this function
+## The first function, `makeVector` creates a special "list" containing 4 functions
+## 1.  set the value of the matrix
+## 2.  get the value of the matrix
+## 3.  set the inverse of the matrix
+## 4.  get the inverse of the matrix
 
 makeCacheMatrix <- function(x = matrix()) {
         m <- NULL
@@ -19,7 +22,8 @@ makeCacheMatrix <- function(x = matrix()) {
 }
 
 
-## Write a short comment describing this function
+## calculates the inverse of the special "list" created by makeCachMatrix
+
 
 cacheSolve <- function(x, ...) {
         m <- x$getinverse()
@@ -34,14 +38,3 @@ cacheSolve <- function(x, ...) {
         ## Return a matrix that is the inverse of 'x'
 }
 
-cachemean <- function(x, ...) {
-        m <- x$getmean()
-        if(!is.null(m)) {
-                message("getting cached data")
-                return(m)
-        }
-        data <- x$get()
-        m <- mean(data, ...)
-        x$setmean(m)
-        m
-}
