@@ -38,3 +38,7 @@ cacheSolve <- function(x, ...) {
         ## Return a matrix that is the inverse of 'x'
 }
 
+## To calculattes inverse matrix, please create a special "list" using makeCacheMatrix.
+## a <- makeCacheMatrix(X)
+## And then calculate with cacheSolve
+## cacheSolve(a)
